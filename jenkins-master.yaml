@@ -1,0 +1,23 @@
+master:
+    numExecutors: 3
+    adminUser: sunjoo
+    adminPassword: kuie1996
+    jenkinsAdminEmail: "all4dich@gmail.com"
+    servicePort: 1905
+    slaveListenerPort: 50000
+    ingress:
+        enabled: true
+    installPlugins:
+    - kubernetes:1.14.0
+env:
+    name: "you"
+persistence:
+    enabled: true
+agent:
+    enabled: true
+    privileged: true
+    podName: jenkins-agent
+    volumes:
+    - type: HostPath
+      hostPath: "/tmp/"
+      mountPath: "/tmp"

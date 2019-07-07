@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: jenkins-agent
+spec:
+    replicas: 4
+    selector:
+        matchLabels:
+            app: jenkins-agent
+    template:
+        metadata:
+            labels:
+                app: jenkins-agent
+        spec:
+            containers:
+            - name: jenkins-agent
+              image: jenkins/jnlp-slave:latest
+              env:
+              - name: JENKINS_URL
+                value: http://localhost:1905/
+              - name: JENKINS_SECRET
+                value: "sunjoo:kuie1996"
