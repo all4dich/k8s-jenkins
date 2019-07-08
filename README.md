@@ -36,3 +36,12 @@ $> ./create-jenkins-cluster.sh
 ```shell
 $> ./destroy-jenkins-cluster.sh
 ```
+
+## Comments
+* When installing **'stable/jenkins'** app, "**master.installPlugins**" has only one plugin, **kubernetes:1.14.0**. I did it because some plugin of "**kubernetes:1.14.0,workflow-aggregator:2.6,credentials-binding:1.17,git:3.9.1,workflow-job:2.31**" showed error logs when installing it. This caused unsuccessful initialization result and Jenkins release couldn't started sometime. So I wrote a manifest file to install only one plugin to minimize time for creating it.
+* This is a first experience with using Kubernetes/helm. So I have trouble to use Charts configuration for Jenkins application to apply my own Jenkins configuraions to it.  So  I have to study something more about Kubernetes's teminology and background in order to design and mange my Jenkins service with container technologies.
+  Also I will make a detailed guide document about the usage of each field in configuration.
+
+## Question
+
+* **Do you use other container  technologies ?** I prefere to use lxc-based container environment becuase multi-thread  and highly IO-intensive jobs show poor performance and quality in Docker container.
