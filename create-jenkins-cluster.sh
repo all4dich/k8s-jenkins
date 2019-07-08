@@ -16,7 +16,8 @@ else
     echo "INFO: Install kubernetes-helm" 
     brew install kubernetes-helm
 fi
-
+echo "INFO: helm init"
+helm init
 echo "INFO: Create Jenkins Cluster and NGINX"
 ./install.sh
 echo "INFO: Waiting got 120 seconds "
