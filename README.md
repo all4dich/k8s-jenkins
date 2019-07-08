@@ -8,7 +8,6 @@
 ## Checklist
 1. :question: Deploy Jenkins Service
     1. :white_check_mark: 2 Jenkins Masters
-    Question) 
     1. :x: 2 Jenkins Agents
     > Memo) \
     Do you want to  one Jenkins Site with Jenkins Masters? \
@@ -35,5 +34,5 @@ $> ./create-jenkins-cluster.sh
 ```
 * Destroy a cluster
 ```shell
-./destroy-jenkins-cluster.sh
+$> ./destroy-jenkins-cluster.sh
 ```
