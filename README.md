@@ -29,11 +29,11 @@
 1. :white_check_mark: Upload the solution on a Github repository
 
 ## How to use
-1. Create Jenkins Cluster
+* Create Jenkins Cluster
 ```shell
 $> ./create-jenkins-cluster.sh
 ```
-1. Destroy a cluster
+* Destroy a cluster
 ```shell
 ./destroy-jenkins-cluster.sh
 ```
